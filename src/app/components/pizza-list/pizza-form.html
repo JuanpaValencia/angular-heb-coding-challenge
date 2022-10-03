@@ -1,0 +1,31 @@
+<div mat-dialog-content>
+  <p>Build Your Pizza</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Crust</mat-label>
+    <mat-select [(ngModel)]="data.Crust">
+      <mat-option *ngFor="let item of crusts" [value]="item.viewValue">
+        {{item.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Flavor</mat-label>
+    <mat-select [(ngModel)]="data.Flavor">
+      <mat-option *ngFor="let item of flavors" [value]="item.viewValue">
+        {{item.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Size</mat-label>
+    <mat-select [(ngModel)]="data.Size">
+      <mat-option *ngFor="let item of sizes" [value]="item.viewValue">
+        {{item.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button [disabled]="!data.Crust || !data.Flavor || !data.Size ? 'disabled' : null" mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

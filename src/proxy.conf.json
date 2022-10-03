@@ -1,0 +1,11 @@
+{
+    "/api/*": {
+        "target": "https://order-pizza-api.herokuapp.com",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+          "^/api/*": "https://order-pizza-api.herokuapp.com/api/"
+        }
+    }
+}

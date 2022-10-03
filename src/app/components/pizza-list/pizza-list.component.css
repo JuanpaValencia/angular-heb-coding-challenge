@@ -1,0 +1,22 @@
+.logout-button {
+    margin-top: 5px;
+    margin-right: 10px;
+    float:right;
+}
+
+.delete-button {
+    margin-right: 5px;
+}
+
+.search-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.search-text {
+    margin-right: 5px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
